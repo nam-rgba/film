@@ -1,0 +1,62 @@
+/* Default config and background image */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background_image {
+    background-image: url("images/771259.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+
+
+
+/* For header: logo and navbar */
+
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.2rem 4rem;
+
+}
+
+header .navbar .logo,
+.navbar-link {
+    padding-top: 1rem;
+
+}
+
+header .navbar .logo img {
+    height: 4rem;
+}
+
+.navbar-link{
+
+}
+
+.navbar-link ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.navbar-link ul li{
+    list-style-type: none;
+    margin: 0 1.8rem;
+    
+}
+.navbar-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
