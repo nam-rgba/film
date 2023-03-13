@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .background_image {
@@ -26,22 +26,18 @@ header .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.2rem 4rem;
+    padding: 0.2rem 4rem;
 
 }
 
 header .navbar .logo,
 .navbar-link {
-    padding-top: 1rem;
+    padding-top: 0.8rem;
 
 }
 
 header .navbar .logo img {
-    height: 4rem;
-}
-
-.navbar-link{
-
+    height: 3rem;
 }
 
 .navbar-link ul{
@@ -60,3 +56,73 @@ header .navbar .logo img {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* For content of header */
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3.5rem;
+}
+
+.film-info{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.film-name{
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: bolder;
+
+}
+
+.info_1{
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    font-size: 14px;
+}
+
+.info_1 > div{
+    display: flex;
+    flex-direction: row;
+    padding:  0;
+    font-size: 16px;
+    padding-right: 1rem;
+    margin-bottom: 0;
+}
+
+.info_1 p{
+    margin:0;
+}
+
+.info_1 i{
+    color: yellow;
+    padding-top: 3px;
+    font-size: small;
+    padding-right: 4px;
+    height: fit-content;
+}
+
+.info_1 .type{
+    height: fit-content;
+}
+
+.review p {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.85rem;
+
+}
+
+.review p span{
+    color: yellow;;
+}
+
+
+
