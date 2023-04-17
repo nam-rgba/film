@@ -10,17 +10,78 @@ body {
 }
 
 .background_image {
-    background-image: url("images/771259.jpg");
+    
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left:0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    animation: slider 12.5s infinite;
 }
+
+.slides .background_image:nth-child(1){
+    background-image: url("images/771259.jpg");
+    animation-delay: -0;
+}
+
+.slides .background_image:nth-child(2){
+    background-image: url("images/42025.jpg");
+    animation-delay: -2.5s;
+}
+
+.slides .background_image:nth-child(3){
+    background-image: url("images/740296.png");
+    animation-delay: -5s;
+}
+
+.slides .background_image:nth-child(4){
+    background-image: url("images/2813640.jpg");
+    animation-delay: -7.5s;
+}
+
+.slides .background_image:nth-child(5){
+    background-image: url("images/1167501.jpg");
+    animation-delay: -10s;
+}
+
+@keyframes slider {
+    0%, 16%, 100% {
+      opacity: 1;
+      animation-timing-function: ease;
+      z-index: 0;
+    }
+    20% {
+      opacity: 0;
+      animation-timing-function: step-end;
+      z-index: 0;
+    }
+    96% {
+      opacity: 1;
+      animation-timing-function: step-end;
+      z-index: -1;
+    }
+  }
+
 
 
 
 
 
 /* For header: logo and navbar */
+header{
+    z-index: 999;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+
+}
 
 header .navbar {
     display: flex;
@@ -63,7 +124,7 @@ header .navbar .logo img {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 3.5rem;
+    margin: 3.5rem 0;
 }
 
 .film-info{
@@ -124,5 +185,56 @@ header .navbar .logo img {
     color: yellow;;
 }
 
+.right{
+    float: right;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    justify-content: center;
+}
+
+.right >p{
+    float: right;
+    text-align: right;
+    direction: rtl;
+    width: 100%;
+}
+
+.right >p>span{
+    color: yellow;
+}
+
+.buttons{
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 0 1rem 0 0;
+    border: 2px solid yellow;
+    border-radius: 2px;
+    width: 6rem;
+}
+
+.primary{
+    background-color: yellow;
+    color: #2c154d;
+    
+}
+
+.secondary{
+    color: yellow;
+    background-color:transparent ;
+}
+
+.slides{
+ 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+header.sticky{
+    background-color: #252324;
+}
 
 
