@@ -4,12 +4,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,400&display=swap');
+
+
+:root{
+    --primary: yellow;
+    --custom-primary:#f8d90f;
+    --tertiary: #48c78e
+    --quaternary:#3e8ed0
+}
+
+
+
 
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+
 
 .background_image {
     
@@ -226,6 +239,12 @@ header .navbar .logo img {
     
 }
 
+.primary:hover{
+    color: yellow;
+    background-color: #333333;
+    box-shadow: 2px 2px 1px 1px rgba(255,255,0);
+}
+
 .secondary{
     color: yellow;
     background-color:transparent ;
@@ -270,16 +289,21 @@ video{
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 3rem 3rem 3rem;
-    background-color: #06121e;
+    background-color: #222222;
     color: #ffffff;
-    font-family: 'Merriweather', serif;
+    
 }
 
 .buttons{
     transition: all 0.25s;
     cursor: pointer;
+    font-weight: lighter;
+    margin: 0 0 0 1rem;
 }
 
+h1, h3{
+    font-family: 'Merriweather', serif;
+}
 
  .tertiary {
     background-color: transparent;
@@ -303,6 +327,17 @@ video{
     background-color: #3e8ed0;
 }
 
+.back{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.btns{
+    margin: 1rem 0;
+}
+
 
 .back>a{
     color: #3e8ed0;
@@ -322,4 +357,132 @@ video{
     font-weight: lighter;
     font-size: 80%;
 }
+.name{
+    width: 60%;
+}
+.name >p{
+    font-size: 95%;
+    line-height: 140%;
+    background-color: #333333;
+    padding: 1rem;
+}
+
+.suggestion{
+    width: 100%;
+    height: max-content;
+    background-color: #222222;
+    padding-bottom: 4rem;
+}
+.suggestion h4{
+    padding: 1rem 1rem 1rem 2.5rem;
+    color: white;
+    margin: 0;
+}
+
+.film_list_row{
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     height: 16rem;
+     
+}
+
+.film {
+    width: 14%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.film .poster{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.film .poster::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 80%;
+    bottom: -16%;
+    background: linear-gradient(0deg,#06121e,50%,transparent);
+}
+
+.film:hover .poster::before{
+    bottom: -3%;
+    background: linear-gradient(0deg,#06121e,50%,transparent);
+}
+
+.film .poster img{
+
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* object-fit: contain; */
+    object-fit: cover;
+    transition: all 0.2s;
+
+}
+
+.film:hover .poster img{
+    transform: scale(1.1);
+    filter: blur(1px);
+}
+
+.card_detail{
+    position: absolute;
+    width: 100%;
+    bottom: -32%;
+    z-index: 2;
+    color: #ffffff;
+    padding: 0.3rem;
+    transition: 0.2s;
+}
+
+.film:hover .card_detail{
+    bottom: 0%;
+}
+
+.card_detail>h3, .card_detail>p{
+    margin: 2px 0;
+}
+.card_detail p{
+    font-size: 80%;
+}
+.card_detail p span i{
+    font-size: 18px;
+    color: var(--custom-primary);
+}
+
+.card_detail p span{
+    color: var(--custom-primary);
+}
+
+.card_detail .rate_and_gener {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gener{
+    display: flex;
+    flex-direction: row;
+    padding: 0.2rem;
+    margin-right: 1rem;
+    background-color: #fc5521;
+    border-radius: 5px;
+}
+ .gener p{
+    margin: 0;
+ }
+ 
+
 
