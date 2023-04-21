@@ -50,6 +50,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 
 .detail_page>.background_detail{
@@ -157,6 +158,7 @@ header .navbar .logo img {
     align-items: center;
     justify-content: space-around;
     margin: 3.5rem 0;
+    width: 100vw;
 }
 
 .film-info{
@@ -565,6 +567,7 @@ h1, h3{
     top:15%;
     left: 0;
     z-index: 2;
+    width: 100%;
 }
 
 .intro{
@@ -662,6 +665,74 @@ h1, h3{
 .likedmovie h2{
     padding-left: 3rem;
 }
+.left, .right{
+    width: 30%;
+}
+
+
+
+/* Payment page ******************************************* */
+
+
+.payment{
+    padding: 6rem 0;
+    background-color: rgba(0,0,0,0.8);
+}
+ .payment h3{
+    font-family: 'Roboto', sans-serif;
+ }
+
+.introduction_payment{
+     border-bottom: 1px dashed #ffffff;
+     color: #ebebeb;
+     margin: 0 4.2rem;
+}
+.infomation_payment{
+    color: #ffffff;
+     margin: 0 4.2rem;
+}
+
+.introduction_payment p{
+    color: #ffffff;
+    line-height: 140%;
+}
+
+.infomation_payment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.goi{
+    background-color: #333333;
+    width: 40%;
+    color: whitesmoke;
+    text-align: center;
+    padding: 0 0 2rem 0;
+}
+.goi h4{
+    margin: 0.5rem;
+    padding: 0.6rem;
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+}
+
+.infomation_payment h3{
+    width: 100%;
+}
+
+.goi .v i{
+    color: #11cc5c;
+}
+
+.goi .x i{
+    color: #e50914;
+}
+
 
 
 
