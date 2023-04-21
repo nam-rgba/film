@@ -5,15 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch</title>
-
-    <link rel="stylesheet" href="style/css.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://kit.fontawesome.com/a3fe8c29cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/css.css">
     <script src="script.js"></script>
 </head>
 
@@ -40,58 +35,87 @@
                 </div>
             </div>
         </header>
-
-        <div class="watching">
-            <video controls loop width="600">
-                <source
-                    src="https://res.cloudinary.com/dpsux2vzu/video/upload/v1681891665/tz8oxhzm5mspauxccjuo.mp4?fbclid=IwAR27WyaMOTp50AriZMBnTYBb2bg2y4fPS_azyOTIGmvtz2gqsrFSrUlGwVo"
-                    type="video/mp4">
-            </video>
-        </div>
-
-        <!-- <p class="hd">Nếu phim load chậm, âm thanh rè, vui lòng reload trang</p> -->
-
-        <div class="watch_detail">
-            <div class="name">
-                <h1> <span>Trailer of</span> La La Land </h1>
-                <h3>La La Land (2017)</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, perspiciatis libero. Vitae nihil
-                    asperiores ad iusto ut nesciunt culpa, reprehenderit vel, sed, aut quia natus pariatur? Ducimus
-                    temporibus quidem autem.</p>
-
-            </div>
-            <div class="back">
-                <div class="btns">
-                    <button class="buttons tertiary"><i class="fa-solid fa-photo-film"></i> Same Genres</button>
-                    <button class="buttons primary"><i class="fa-solid fa-play"></i> Watch this moview </button>
+        <div class="searchbar">
+            <form action="">
+                <div class="formgroup">
+                    <label for="input" class="visually-hidden"> input </label>
+                    <input type="text" name="input" id="input" placeholder="Enter name of movie">
                 </div>
-                <a href="">Về trang giới thiệu phim </a>
-            </div>
+                <div class="filter">
+                    <div class="form_group">
+                        <label for="gerne">Thể loại: </label>
+                        <select name="gerne" id="gerne">
+                            <option value="all">-Tất cả-</option>
+                            <option value="amnhac">Âm nhạc</option>
+                            <option value="bian">Bí ẩn</option>
+                            <option value="chinhkich">Chính kịch</option>
+                            <option value="chientranh">Chiến tranh</option>
+                            <option value="giadinh">Gia đình</option>
+                            <option value="hai">Hài</option>
+                            <option value="hanhdong">Hành động</option>
+                            <option value="langman">Lãng mạn</option>
+                            <option value="hoathinh">Hoạt hình</option>
+                            <option value="phieuluu">Phiêu lưu</option>
+                            <option value="vientuong">Viễn tưởng</option>
+                            <option value="lichsu">Lịch sử</option>
+                            <option value="kinhdi">Kinh dị</option>
+                        </select>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="country">Quốc gia: </label>
+                        <select name="country" id="country">
+                            <option value="all">-Tất cả-</option>
+                            <option value="USA">USA</option>
+                            <option value="china">Trung Quốc</option>
+                            <option value="korean">Hàn Quốc</option>
+                            <option value="japan">Nhật</option>
+                        </select>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="year">Năm phát hành: </label>
+                        <select name="year" id="year">
+                            <option value="all">-Tất cả-</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
         </div>
+        <div class="result">
+            <div class="suggestion">
 
-        <div class="suggestion">
-            <h4>Hôm nay xem gì?</h3>
-            <div class="film_list_row">
+                <div class="film_list_row">
                     <div class="film ">
-                        <div class="poster">
-                            <img src="style/images/771259.jpg" alt="">
-                        </div>
-                        <div class="card_detail">
-                            <h3>La La Land</h3>
-                            <p> <span>Directed by</span> James Bone</p>
-                            <div class="rate_and_gener">
-                                <p><span><i class="fa-brands fa-imdb"></i></span> 8.0/10</p>
-                                <div class="gener">
-                                    <p>Romace</p>
+                        <a href="details.html">
+                            <div class="poster">
+                                <img src="style/images/771259.jpg" alt="">
+                            </div>
+                            <div class="card_detail">
+                                <h3>La La Land</h3>
+                                <p> <span>Directed by</span> James Bone</p>
+                                <div class="rate_and_gener">
+                                    <p><span><i class="fa-brands fa-imdb"></i></span> 8.0/10</p>
+                                    <div class="gener">
+                                        <p>Romace</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="intro">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos
-                                    voluptatibus</p>
-                            </div>
+                                <div class="intro">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos
+                                        voluptatibus</p>
+                                </div>
 
 
-                        </div>
+                            </div>
+                        </a>
+
 
                     </div>
                     <div class="film ">
@@ -132,7 +156,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="film ffouth">
+                    <div class="film ">
                         <div class="poster">
                             <img src="style/images/1167501.jpg" alt="">
                         </div>
@@ -168,8 +192,53 @@
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos
                                     voluptatibus</p>
                             </div>
+
+
                         </div>
                     </div>
+                    <div class="film ">
+                        <div class="poster">
+                            <img src="style/images/2813640.jpg" alt="">
+                        </div>
+                        <div class="card_detail">
+                            <h3>La La Land</h3>
+                            <p> <span>Directed by</span> James Bone</p>
+                            <div class="rate_and_gener">
+                                <p><span><i class="fa-brands fa-imdb"></i></span> 8.0/10</p>
+                                <div class="gener">
+                                    <p>Romace</p>
+                                </div>
+                            </div>
+                            <div class="intro">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos
+                                    voluptatibus</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="film ">
+                        <div class="poster">
+                            <img src="style/images/2813640.jpg" alt="">
+                        </div>
+                        <div class="card_detail">
+                            <h3>La La Land</h3>
+                            <p> <span>Directed by</span> James Bone</p>
+                            <div class="rate_and_gener">
+                                <p><span><i class="fa-brands fa-imdb"></i></span> 8.0/10</p>
+                                <div class="gener">
+                                    <p>Romace</p>
+                                </div>
+                            </div>
+                            <div class="intro">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dignissimos
+                                    voluptatibus</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

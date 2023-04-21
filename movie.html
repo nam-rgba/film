@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch</title>
 
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/css.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://kit.fontawesome.com/a3fe8c29cc.js" crossorigin="anonymous"></script>
-
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -28,13 +28,14 @@
                     <ul>
                         <li>
                             <div class="search">
-                                <div class="icon"></div>
-                                <div class="input"></div>
+                                <a href="search.html">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
                             </div>
                         </li>
-                        <li><a href="">Movie</a></li>
-                        <li><a href="">Explore</a></li>
-                        <li><a href="">Account</a></li>
+                        <li><a href="index.html">Movie</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="account.html">Account</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +63,8 @@
             <div class="back">
                 <div class="btns">
                     <button class="buttons tertiary"><i class="fa-solid fa-photo-film"></i> Same Genres</button>
-                    <button class="buttons quaternary"><i class="fa-solid fa-heart-circle-check"></i> Like this
+                    <button class="buttons quaternary" id="likefilm"><i class="fa-solid fa-heart-circle-check"></i> Like
+                        this
                         film</button>
                 </div>
                 <a href="">Về trang giới thiệu phim </a>
@@ -71,7 +73,7 @@
 
         <div class="suggestion">
             <h4>Hôm nay xem gì?</h3>
-            <div class="film_list_row">
+                <div class="film_list_row">
                     <div class="film ">
                         <div class="poster">
                             <img src="style/images/771259.jpg" alt="">
@@ -172,9 +174,24 @@
 
                         </div>
                     </div>
-            </div>
+                </div>
         </div>
     </div>
+    <script>
+        let like=false;
+        const btnLike = document.getElementById('likefilm');
+
+        btnLike.addEventListener('click', function handleLike() {
+            if(like) {
+                btnLike.textContent='Like this film';
+                like=false;
+            }
+            else {
+            btnLike.textContent = 'Liked';
+            like=true;
+        }
+        })
+    </script>
 </body>
 
 </html>
